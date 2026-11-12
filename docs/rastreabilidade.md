@@ -1,4 +1,4 @@
-# Rastreabilidade — conceito da aula → classe → teste
+﻿# Rastreabilidade — conceito da aula → classe → teste
 
 Este é o documento de conferência: para cada exigência de `regras.md` e para cada aula
 do portal da disciplina, existe **código** e **teste executável**.
@@ -16,12 +16,12 @@ python demo.py                               # demonstração no console
 
 | # | Exigência | Onde está implementado | Teste que prova |
 |---|---|---|---|
-| 1 | **Classes e Objetos** — personagens, itens e cenários | `personagem.py`, `itens.py`, `cenario.py` | `test_personagem.py::TestPersonagem::test_guerreiro_ataca_com_forca_dobrada` |
+| 1 | **Classes e Objetos** — personagens, itens e cenários | `personagem.py`, `itens.py`, `cenario.py` | `test_personagem.py::test_guerreiro_ataca_com_forca_dobrada` |
 | 2 | **Atributos, Métodos e Interação** — vida/força/defesa + atacar/defender/usar item | `personagem.py` (atributos e `atacar`/`receber_dano`/`usar_item`) | `test_personagem.py::test_atacar_interage_com_receber_dano` |
 | 3 | **Abstração** — classe que não pode ser instanciada | `Personagem(ABC)`, `Item(ABC)`, `Cenario(ABC)` | `test_personagem.py::test_personagem_abstrata_nao_pode_ser_instanciada`, `test_itens.py::test_item_abstrato_nao_pode_ser_instanciado` |
 | 4 | **Interface** — contrato `Combatente.atacar()` | `interfaces.py` | `test_combate.py::test_combate_rejeita_nao_combatente` |
 | 5 | **Herança** — Guerreiro/Mago/Arqueiro de Personagem | `personagem.py` | `test_personagem.py::test_subclasses_sao_personagens` |
-| 6 | **Tratamento de Exceções** — dano inválido, vida negativa, item inexistente | `excecoes.py` + `raise` no domínio | `test_excecoes.py` (11 testes) |
+| 6 | **Tratamento de Exceções** — dano inválido, vida negativa, item inexistente | `excecoes.py` + `raise` no domínio | `test_excecoes.py` (4 testes) |
 | 7 | **Agregação** — Personagem em Grupo/Guilda sobrevive ao grupo | `grupo.py` | `test_grupo.py::test_personagem_sobrevive_ao_grupo` |
 | 8 | **Composição** — Inventario e FichaDeStatus nascem com o Personagem | `inventario.py`, `ficha.py`, construtor de `personagem.py` | `test_personagem.py::test_personagem_cria_ficha_e_inventario` |
 | 9 | **Consumo de classe** — quem usa os métodos de quem | tabela em `visao-de-projeto.md` §4; `combate.py` | `test_combate.py::test_combate_aplica_bonus_do_cenario` |
@@ -42,7 +42,7 @@ python demo.py                               # demonstração no console
 | 06 | Interfaces, polimorfismo, duck typing, segregação | `interfaces.py`, `combate.py`, `aldeao.py` | `Aldeao` recusado; `isinstance(x, Combatente)` |
 | 07 | Agregação × composição, UML | `grupo.py`, `ficha.py`, `inventario.py` | testes de ciclo de vida + Mermaid |
 | 08 | Herança, overriding, exceções personalizadas | `personagem.py`, `excecoes.py` | `atacar()` sobrescrito nas 3 subclasses; 11 exceções |
-| 09 | Testes (`unittest`, AAA) | `testes/` | 45+ testes Arrange-Act-Assert |
+| 09 | Testes (`unittest`, AAA) | `testes/` | 122 testes Arrange-Act-Assert |
 
 ---
 

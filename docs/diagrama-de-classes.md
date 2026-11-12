@@ -1,4 +1,4 @@
-# Diagrama de Classes — Sistema de RPG
+﻿# Diagrama de Classes — Sistema de RPG
 
 > Notação: UML 2.x. O diagrama está em Mermaid (renderiza no GitHub) e repetido em
 > ASCII para impressão. Cada símbolo é mapeado para o código em
@@ -40,7 +40,6 @@ classDiagram
 
     class Guerreiro {
         +atacar(alvo) int
-        +defender() int
     }
 
     class Mago {

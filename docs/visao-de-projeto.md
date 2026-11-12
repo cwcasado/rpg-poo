@@ -104,9 +104,9 @@ Combatente
 
 | Subclasse | Diferencial | `atacar()` |
 |---|---|---|
-| `Guerreiro` | vida 120, defesa 12, forca 18 | `forca * 2` (golpe pesado) |
-| `Mago` | vida 80, defesa 6, forca 14, `mana` 40 | `forca + mana // 2`, consome 5 de mana (`SemManaError`) |
-| `Arqueiro` | vida 95, defesa 8, forca 15, `precisao` 6 | `forca + precisao` |
+| `Guerreiro` | vida 120, defesa 12, forca 18 | `(força + bônus de arma) * 2` (golpe pesado) |
+| `Mago` | vida 80, defesa 6, forca 14, `mana` 40 | `força + bônus + mana // 2`, consome 5 de mana (`SemManaError`) |
+| `Arqueiro` | vida 95, defesa 8, forca 15, `precisao` 6 | `força + bônus + precisão` |
 
 Cada uma chama `super().__init__(...)` e **sobrescreve** `atacar()`; o polimorfismo é
 exercido quando o `Combate` chama `atacante.atacar(defensor)` sem saber o tipo concreto.

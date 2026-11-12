@@ -83,11 +83,14 @@ demo.py              demonstração executável
 
 ## Status das etapas
 
-| Etapa | Entrega | Situação |
-|---|---|---|
-| 1 | Modelagem (caso de uso, visão, diagrama, rastreabilidade) | concluída |
-| 2 | Fundação (exceções, interface, itens, ficha, inventário) | em andamento |
-| 3 | Personagens (abstrata + subclasses) | pendente |
-| 4 | Grupo e cenário | pendente |
-| 5 | Combate | pendente |
-| 6 | CLI, demo, README e validação final | pendente |
+| Etapa | Entrega | Situação | Commit |
+|---|---|---|---|
+| 1 | Modelagem (caso de uso, visão, diagrama, rastreabilidade) | concluída | `docs:` |
+| 2 | Fundação (exceções, interface, itens, ficha, inventário) | concluída | `feat(fundacao):` |
+| 3 | Personagens (abstrata + subclasses) | concluída | `feat(personagens):` |
+| 4 | Grupo e cenário | concluída | `feat(combate):` |
+| 5 | Combate e aldeão | concluída | `feat(combate):` |
+| 6 | CLI, demo, README e validação final | concluída | `feat(cli):` |
+
+**Verificação final:** `python -m unittest discover -s testes` → **122 testes OK**.
+**Demonstração:** `python demo.py` imprime os 9 conceitos em execução.
