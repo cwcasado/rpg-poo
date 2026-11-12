@@ -1,0 +1,11 @@
+{
+  "model": {
+    "providerID": "opencode",
+    "id": "big-pickle",
+    "variant": "default"
+  },
+  "modelRef": "opencode/big-pickle#default",
+  "agent": "socrates",
+  "sessionID": "ses_e301f761affe9rP6TyhMiDW05n",
+  "updatedAt": "2026-11-12T13:09:21.531Z"
+}
