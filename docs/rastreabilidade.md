@@ -25,7 +25,7 @@ python demo.py                               # demonstração no console
 | 7 | **Agregação** — Personagem em Grupo/Guilda sobrevive ao grupo | `grupo.py` | `test_grupo.py::test_personagem_sobrevive_ao_grupo` |
 | 8 | **Composição** — Inventario e FichaDeStatus nascem com o Personagem | `inventario.py`, `ficha.py`, construtor de `personagem.py` | `test_personagem.py::test_personagem_cria_ficha_e_inventario` |
 | 9 | **Consumo de classe** — quem usa os métodos de quem | tabela em `visao-de-projeto.md` §4; `combate.py` | `test_combate.py::test_combate_aplica_bonus_do_cenario` |
-| 10 | **Ambiente que favorece o usuário** — Floresta/Caverna/Castelo com vantagem | `cenario.py` | `test_cenario.py` (6 testes) |
+| 10 | **Ambiente que favorece o usuário** — Floresta/Caverna/Castelo com vantagem | `cenario.py` | `test_cenario.py` (12 testes) |
 | 11 | **Sem back-end / sem front-end / sem gráfico** | apenas `input()`/`print()` em `cli.py`, `demo.py` | inspeção + `test_cli.py` |
 
 ---
