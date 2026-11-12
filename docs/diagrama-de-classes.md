@@ -1,4 +1,4 @@
-﻿# Diagrama de Classes — Sistema de RPG
+# Diagrama de Classes — Sistema de RPG
 
 > Notação: UML 2.x. O diagrama está em Mermaid (renderiza no GitHub) e repetido em
 > ASCII para impressão. Cada símbolo é mapeado para o código em
@@ -6,7 +6,28 @@
 
 ---
 
-## 1. Diagrama (Mermaid)
+## 1. Arquivos do diagrama
+
+| Arquivo | Formato | Uso |
+|---|---|---|
+| [`diagrama-classes.drawio`](diagrama-classes.drawio) | XML `mxfile` (draw.io / diagrams.net) | **editável** — abra em <https://app.diagrams.net> (File → Open) ou no VS Code com a extensão *Draw.io Integration* |
+| [`diagrama-classes.svg`](diagrama-classes.svg) | SVG vetorial | visualização rápida no navegador/GitHub, sem instalar nada |
+| `ferramentas/gerar_drawio.py` | script Python (sem dependências) | **fonte da verdade** do layout: gera os dois arquivos acima de forma reprodutível |
+
+![Diagrama de classes](diagrama-classes.svg)
+
+Para regenerar depois de qualquer ajuste no modelo:
+
+```bash
+python ferramentas/gerar_drawio.py
+```
+
+O script valida o XML produzido (parse + ids duplicados), então um erro de
+geração falha com mensagem clara em vez de gerar um arquivo corrompido.
+
+---
+
+## 2. Diagrama (Mermaid)
 
 ```mermaid
 classDiagram
@@ -173,7 +194,7 @@ classDiagram
 
 ---
 
-## 2. Diagrama em ASCII
+## 3. Diagrama em ASCII
 
 ```
                         <<interface>>
@@ -230,7 +251,7 @@ classDiagram
 
 ---
 
-## 3. Legenda de notação → código
+## 4. Legenda de notação → código
 
 | Símbolo UML | Significado no projeto | Onde aparece no código |
 |---|---|---|
@@ -246,7 +267,7 @@ classDiagram
 
 ---
 
-## 4. Multiplicidades
+## 5. Multiplicidades
 
 | Relação | Multiplicidade | Leitura |
 |---|---|---|
@@ -257,7 +278,7 @@ classDiagram
 
 ---
 
-## 5. Por que cada relação é o que é
+## 6. Por que cada relação é o que é
 
 | Relação | Teste aplicado | Resultado |
 |---|---|---|

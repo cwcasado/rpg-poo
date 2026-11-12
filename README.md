@@ -24,6 +24,8 @@ para demonstrar, em execução, **todos os conceitos de POO vistos em aula**.
 | [`docs/caso-de-uso.md`](docs/caso-de-uso.md) | atores, 8 casos de uso, fluxos alternativos, regras de negócio |
 | [`docs/visao-de-projeto.md`](docs/visao-de-projeto.md) | arquitetura, classes, atributos/métodos, consumo de classe, ADRs |
 | [`docs/diagrama-de-classes.md`](docs/diagrama-de-classes.md) | UML em Mermaid + ASCII, multiplicidades, justificativa de cada relação |
+| [`docs/diagrama-classes.drawio`](docs/diagrama-classes.drawio) | diagrama **editável** no draw.io / diagrams.net |
+| [`docs/diagrama-classes.svg`](docs/diagrama-classes.svg) | visualização vetorial do mesmo diagrama |
 | [`docs/rastreabilidade.md`](docs/rastreabilidade.md) | conceito da aula → arquivo → teste que prova |
 
 ## Requisitos
@@ -42,6 +44,9 @@ python demo.py
 
 # testes
 python -m unittest discover -s testes -v
+
+# regenerar o diagrama (.drawio + .svg) a partir do modelo do script
+python ferramentas/gerar_drawio.py
 ```
 
 ## Estrutura
@@ -61,7 +66,8 @@ rpg/
 ├── cli.py           menu de console
 └── __main__.py      python -m rpg
 testes/              unittest, padrão Arrange-Act-Assert
-docs/                modelagem
+docs/                modelagem + diagrama .drawio/.svg
+ferramentas/         gerador do diagrama draw.io (sem dependências)
 demo.py              demonstração executável
 ```
 
@@ -91,6 +97,7 @@ demo.py              demonstração executável
 | 4 | Grupo e cenário | concluída | `feat(combate):` |
 | 5 | Combate e aldeão | concluída | `feat(combate):` |
 | 6 | CLI, demo, README e validação final | concluída | `feat(cli):` |
+| 7 | Diagrama editável em draw.io + SVG de pré-visualização | concluída | `docs(diagrama):` |
 
 **Verificação final:** `python -m unittest discover -s testes` → **122 testes OK**.
 **Demonstração:** `python demo.py` imprime os 9 conceitos em execução.
