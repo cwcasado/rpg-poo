@@ -28,12 +28,6 @@ As setas são o caminho da prova: remover o arquivo ou o teste de uma linha queb
 rastreabilidade daquele conceito. As 11 linhas cobrem os 9 conceitos das aulas, o
 requisito de ambiente favorecido e a restrição de não usar back-end/front-end.
 
-Regenerar:
-
-```bash
-python ferramentas/gerar_diagramas.py
-```
-
 ---
 
 ## 2. Exigências de `regras.md`

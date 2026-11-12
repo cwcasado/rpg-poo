@@ -29,8 +29,7 @@ tratamento de exceções, agregação, composição e consumo de classe.
 
 ## 3. Diagrama de casos de uso (UML)
 
-O diagrama é gerado por script a partir de um modelo único
-(`ferramentas/diagramas/casos_uso.py`), que produz o arquivo editável e a prévia vetorial:
+O diagrama é entregue em dois formatos equivalentes:
 
 | Arquivo | Uso |
 |---|---|
@@ -48,12 +47,6 @@ Leitura do diagrama:
 - **UC08** está no diagrama para evidenciar a interface: `Aldeao` **não** realiza
   `Combatente`, portanto nunca entra em combate (`AlvoInvalidoError`).
 - A fronteira **"Sistema de RPG (console)"** delimita o escopo: sem API, sem banco e sem GUI.
-
-Regenerar:
-
-```bash
-python ferramentas/gerar_diagramas.py
-```
 
 ---
 

@@ -64,7 +64,7 @@ acumula log em lista — quem imprime é a CLI).
 
 ### 2.1 Diagrama de camadas (draw.io)
 
-Gerado por `ferramentas/diagramas/visao.py` a partir do mesmo modelo:
+Arquivos do diagrama:
 
 | Arquivo | Uso |
 |---|---|
@@ -87,12 +87,6 @@ Como ler:
   (dependência de contrato). Nenhuma seta sobe do domínio para a apresentação — é a
   regra de dependência em forma de desenho.
 - As notas registram as restrições do enunciado e o ADR-02 (um arquivo por conceito).
-
-Regenerar:
-
-```bash
-python ferramentas/gerar_diagramas.py
-```
 
 ---
 
@@ -304,5 +298,4 @@ Decisão: aceito.
 python -m rpg                          # menu interativo de console
 python demo.py                         # demonstração roteirizada (evidência)
 python -m unittest discover -s testes -v
-python ferramentas/gerar_diagramas.py  # regenera todos os .drawio + .svg
 ```

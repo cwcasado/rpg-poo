@@ -47,10 +47,6 @@ python demo.py
 
 # testes
 python -m unittest discover -s testes -v
-
-# regenerar todos os diagramas (.drawio + .svg): classes, casos de uso,
-# visão de projeto e rastreabilidade
-python ferramentas/gerar_diagramas.py
 ```
 
 ## Estrutura
@@ -71,7 +67,6 @@ rpg/
 └── __main__.py      python -m rpg
 testes/              unittest, padrão Arrange-Act-Assert
 docs/                modelagem + diagramas .drawio/.svg
-ferramentas/         gerador dos diagramas draw.io (sem dependências)
 demo.py              demonstração executável
 ```
 
@@ -91,18 +86,7 @@ demo.py              demonstração executável
 | Ambiente favorece tipo | `cenario.py` | `test_cenario.py` |
 | Testes (A09) | `testes/` | `python -m unittest` |
 
-## Status das etapas
+## Verificação
 
-| Etapa | Entrega | Situação | Commit |
-|---|---|---|---|
-| 1 | Modelagem (caso de uso, visão, diagrama, rastreabilidade) | concluída | `docs:` |
-| 2 | Fundação (exceções, interface, itens, ficha, inventário) | concluída | `feat(fundacao):` |
-| 3 | Personagens (abstrata + subclasses) | concluída | `feat(personagens):` |
-| 4 | Grupo e cenário | concluída | `feat(combate):` |
-| 5 | Combate e aldeão | concluída | `feat(combate):` |
-| 6 | CLI, demo, README e validação final | concluída | `feat(cli):` |
-| 7 | Diagrama editável em draw.io + SVG de pré-visualização | concluída | `docs(diagrama):` |
-| 8 | Diagramas de casos de uso, visão de projeto e rastreabilidade (draw.io + SVG) | concluída | `docs(diagramas):` |
-
-**Verificação final:** `python -m unittest discover -s testes` → **122 testes OK**.
-**Demonstração:** `python demo.py` imprime os 9 conceitos em execução.
+Execute `python -m unittest discover -s testes` para validar o sistema.
+Para uma apresentação rápida dos conceitos de POO, execute `python demo.py`.
