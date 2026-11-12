@@ -26,6 +26,9 @@ para demonstrar, em execução, **todos os conceitos de POO vistos em aula**.
 | [`docs/diagrama-de-classes.md`](docs/diagrama-de-classes.md) | UML em Mermaid + ASCII, multiplicidades, justificativa de cada relação |
 | [`docs/diagrama-classes.drawio`](docs/diagrama-classes.drawio) | diagrama **editável** no draw.io / diagrams.net |
 | [`docs/diagrama-classes.svg`](docs/diagrama-classes.svg) | visualização vetorial do mesmo diagrama |
+| [`docs/diagrama-casos-de-uso.drawio`](docs/diagrama-casos-de-uso.drawio) | casos de uso UML (Jogador, Sistema, UC01–UC08) — [SVG](docs/diagrama-casos-de-uso.svg) |
+| [`docs/diagrama-visao-de-projeto.drawio`](docs/diagrama-visao-de-projeto.drawio) | camadas, responsabilidades e acoplamento — [SVG](docs/diagrama-visao-de-projeto.svg) |
+| [`docs/diagrama-rastreabilidade.drawio`](docs/diagrama-rastreabilidade.drawio) | exigência → arquivo → teste — [SVG](docs/diagrama-rastreabilidade.svg) |
 | [`docs/rastreabilidade.md`](docs/rastreabilidade.md) | conceito da aula → arquivo → teste que prova |
 
 ## Requisitos
@@ -45,8 +48,9 @@ python demo.py
 # testes
 python -m unittest discover -s testes -v
 
-# regenerar o diagrama (.drawio + .svg) a partir do modelo do script
-python ferramentas/gerar_drawio.py
+# regenerar todos os diagramas (.drawio + .svg): classes, casos de uso,
+# visão de projeto e rastreabilidade
+python ferramentas/gerar_diagramas.py
 ```
 
 ## Estrutura
@@ -66,8 +70,8 @@ rpg/
 ├── cli.py           menu de console
 └── __main__.py      python -m rpg
 testes/              unittest, padrão Arrange-Act-Assert
-docs/                modelagem + diagrama .drawio/.svg
-ferramentas/         gerador do diagrama draw.io (sem dependências)
+docs/                modelagem + diagramas .drawio/.svg
+ferramentas/         gerador dos diagramas draw.io (sem dependências)
 demo.py              demonstração executável
 ```
 
@@ -98,6 +102,7 @@ demo.py              demonstração executável
 | 5 | Combate e aldeão | concluída | `feat(combate):` |
 | 6 | CLI, demo, README e validação final | concluída | `feat(cli):` |
 | 7 | Diagrama editável em draw.io + SVG de pré-visualização | concluída | `docs(diagrama):` |
+| 8 | Diagramas de casos de uso, visão de projeto e rastreabilidade (draw.io + SVG) | concluída | `docs(diagramas):` |
 
 **Verificação final:** `python -m unittest discover -s testes` → **122 testes OK**.
 **Demonstração:** `python demo.py` imprime os 9 conceitos em execução.

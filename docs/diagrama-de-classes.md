@@ -13,13 +13,15 @@
 | [`diagrama-classes.drawio`](diagrama-classes.drawio) | XML `mxfile` (draw.io / diagrams.net) | **editável** — abra em <https://app.diagrams.net> (File → Open) ou no VS Code com a extensão *Draw.io Integration* |
 | [`diagrama-classes.svg`](diagrama-classes.svg) | SVG vetorial | visualização rápida no navegador/GitHub, sem instalar nada |
 | `ferramentas/gerar_drawio.py` | script Python (sem dependências) | **fonte da verdade** do layout: gera os dois arquivos acima de forma reprodutível |
+| `ferramentas/gerar_diagramas.py` | script Python (sem dependências) | regenera **todos** os diagramas (classes + casos de uso + visão + rastreabilidade) |
 
 ![Diagrama de classes](diagrama-classes.svg)
 
 Para regenerar depois de qualquer ajuste no modelo:
 
 ```bash
-python ferramentas/gerar_drawio.py
+python ferramentas/gerar_drawio.py      # só o diagrama de classes
+python ferramentas/gerar_diagramas.py   # todos os diagramas
 ```
 
 O script valida o XML produzido (parse + ids duplicados), então um erro de

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="930" viewBox="0 0 1400 930" font-family="Segoe UI, Arial, sans-serif">
+<defs>
+<marker id="tri" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,0 L12,6 L0,12 z" fill="#ffffff" stroke="#333" stroke-width="1"/></marker>
+<marker id="seta" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M0,1 L11,6 L0,11" fill="none" stroke="#333" stroke-width="1.2"/></marker>
+<marker id="losango-cheio" markerWidth="14" markerHeight="12" refX="1" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,6 L7,1 L13,6 L7,11 z" fill="#333" stroke="#333"/></marker>
+<marker id="losango-vazio" markerWidth="14" markerHeight="12" refX="1" refY="6" orient="auto" markerUnits="userSpaceOnUse"><path d="M1,6 L7,1 L13,6 L7,11 z" fill="#ffffff" stroke="#333"/></marker>
+</defs>
+<rect width="100%" height="100%" fill="#ffffff"/>
+<text x="60" y="22" font-size="18" font-weight="bold" fill="#111">Rastreabilidade — conceito · código · teste</text>
+<g><rect x="40" y="64" width="300" height="40" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="88.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#111">Conceito (regras.md)</text></g>
+<g><rect x="380" y="64" width="340" height="40" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="88.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#111">Onde está no código</text></g>
+<g><rect x="760" y="64" width="600" height="40" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="88.0" text-anchor="middle" font-size="11" font-weight="bold" fill="#111">Teste que prova</text></g>
+<g><rect x="40" y="116" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="142.6" text-anchor="middle" font-size="10" fill="#111">1. Classes e objetos</text></g>
+<g><rect x="380" y="116" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="142.6" text-anchor="middle" font-size="10" fill="#111">personagem.py · itens.py · cenario.py</text></g>
+<g><rect x="760" y="116" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="142.6" text-anchor="middle" font-size="10" fill="#111">test_personagem.py::test_guerreiro_ataca_com_forca_dobrada</text></g>
+<g><rect x="40" y="182" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="208.6" text-anchor="middle" font-size="10" fill="#111">2. Atributos, métodos e interação</text></g>
+<g><rect x="380" y="182" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="202.1" text-anchor="middle" font-size="10" fill="#111">personagem.py</text><text x="550.0" y="215.1" text-anchor="middle" font-size="10" fill="#111">(atacar · receber_dano · usar_item)</text></g>
+<g><rect x="760" y="182" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="208.6" text-anchor="middle" font-size="10" fill="#111">test_personagem.py::test_atacar_interage_com_receber_dano</text></g>
+<g><rect x="40" y="248" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="274.6" text-anchor="middle" font-size="10" fill="#111">3. Abstração (ABC)</text></g>
+<g><rect x="380" y="248" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="274.6" text-anchor="middle" font-size="10" fill="#111">personagem.py · itens.py · cenario.py</text></g>
+<g><rect x="760" y="248" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="274.6" text-anchor="middle" font-size="10" fill="#111">test_personagem.py::test_personagem_abstrata_nao_pode_ser_instanciada</text></g>
+<g><rect x="40" y="314" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="340.6" text-anchor="middle" font-size="10" fill="#111">4. Interface Combatente</text></g>
+<g><rect x="380" y="314" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="340.6" text-anchor="middle" font-size="10" fill="#111">interfaces.py · personagem.py</text></g>
+<g><rect x="760" y="314" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="340.6" text-anchor="middle" font-size="10" fill="#111">test_combate.py::test_combate_rejeita_nao_combatente</text></g>
+<g><rect x="40" y="380" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="406.6" text-anchor="middle" font-size="10" fill="#111">5. Herança</text></g>
+<g><rect x="380" y="380" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="400.1" text-anchor="middle" font-size="10" fill="#111">personagem.py</text><text x="550.0" y="413.1" text-anchor="middle" font-size="10" fill="#111">(Guerreiro/Mago/Arqueiro)</text></g>
+<g><rect x="760" y="380" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="406.6" text-anchor="middle" font-size="10" fill="#111">test_personagem.py::test_subclasses_sao_personagens</text></g>
+<g><rect x="40" y="446" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="472.6" text-anchor="middle" font-size="10" fill="#111">6. Exceções</text></g>
+<g><rect x="380" y="446" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="472.6" text-anchor="middle" font-size="10" fill="#111">excecoes.py + raise no domínio</text></g>
+<g><rect x="760" y="446" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="472.6" text-anchor="middle" font-size="10" fill="#111">test_excecoes.py (4 testes)</text></g>
+<g><rect x="40" y="512" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="538.6" text-anchor="middle" font-size="10" fill="#111">7. Agregação</text></g>
+<g><rect x="380" y="512" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="538.6" text-anchor="middle" font-size="10" fill="#111">grupo.py</text></g>
+<g><rect x="760" y="512" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="538.6" text-anchor="middle" font-size="10" fill="#111">test_grupo.py::test_personagem_sobrevive_ao_grupo</text></g>
+<g><rect x="40" y="578" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="604.6" text-anchor="middle" font-size="10" fill="#111">8. Composição</text></g>
+<g><rect x="380" y="578" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="604.6" text-anchor="middle" font-size="10" fill="#111">ficha.py · inventario.py · personagem.py</text></g>
+<g><rect x="760" y="578" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="604.6" text-anchor="middle" font-size="10" fill="#111">test_personagem.py::test_personagem_cria_ficha_e_inventario</text></g>
+<g><rect x="40" y="644" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="670.6" text-anchor="middle" font-size="10" fill="#111">9. Consumo de classe</text></g>
+<g><rect x="380" y="644" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="670.6" text-anchor="middle" font-size="10" fill="#111">combate.py</text></g>
+<g><rect x="760" y="644" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="670.6" text-anchor="middle" font-size="10" fill="#111">test_combate.py::test_combate_aplica_bonus_do_cenario</text></g>
+<g><rect x="40" y="710" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="736.6" text-anchor="middle" font-size="10" fill="#111">10. Ambiente favorecido</text></g>
+<g><rect x="380" y="710" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="736.6" text-anchor="middle" font-size="10" fill="#111">cenario.py</text></g>
+<g><rect x="760" y="710" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="736.6" text-anchor="middle" font-size="10" fill="#111">test_cenario.py (12 testes)</text></g>
+<g><rect x="40" y="776" width="300" height="46" rx="2" fill="#dae8fc" stroke="#333333"/><text x="190.0" y="802.6" text-anchor="middle" font-size="10" fill="#111">11. Sem back-end / front-end</text></g>
+<g><rect x="380" y="776" width="340" height="46" rx="2" fill="#d5e8d4" stroke="#333333"/><text x="550.0" y="802.6" text-anchor="middle" font-size="10" fill="#111">cli.py · demo.py (só input/print)</text></g>
+<g><rect x="760" y="776" width="600" height="46" rx="2" fill="#fff2cc" stroke="#333333"/><text x="1060.0" y="802.6" text-anchor="middle" font-size="10" fill="#111">test_cli.py</text></g>
+<g><path d="M40,850 h746 l14,14 v36 h-760 z" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/><text x="50.0" y="863.0" text-anchor="start" font-size="9" font-weight="bold" fill="#111">Como provar</text><text x="50.0" y="874.7" text-anchor="start" font-size="9" fill="#111">python -m unittest discover -s testes   ·   python demo.py</text></g>
+<g><polyline points="340.0,139.0 380.0,139.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,139.0 760.0,139.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,205.0 380.0,205.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,205.0 760.0,205.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,271.0 380.0,271.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,271.0 760.0,271.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,337.0 380.0,337.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,337.0 760.0,337.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,403.0 380.0,403.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,403.0 760.0,403.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,469.0 380.0,469.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,469.0 760.0,469.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,535.0 380.0,535.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,535.0 760.0,535.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,601.0 380.0,601.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,601.0 760.0,601.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,667.0 380.0,667.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,667.0 760.0,667.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,733.0 380.0,733.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,733.0 760.0,733.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="340.0,799.0 380.0,799.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+<g><polyline points="720.0,799.0 760.0,799.0" fill="none" stroke="#888888" stroke-width="1.0" marker-end="url(#seta)"/></g>
+</svg>

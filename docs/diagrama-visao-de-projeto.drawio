@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Socrates" version="24.7.17" type="device">
+  <diagram id="visao-de-projeto" name="Visão de Projeto">
+    <mxGraphModel dx="1600" dy="1000" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="760" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="titulo-diagrama" value="Visão de Projeto — Arquitetura em Camadas" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=18;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="2" width="900" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="camada-apresentacao" value="CAMADA DE APRESENTAÇÃO (console)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eaf2fb;strokeColor=#7ea6d8;align=left;verticalAlign=top;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="1320" height="130" as="geometry"/>
+        </mxCell>
+        <mxCell id="camada-dominio" value="CAMADA DE DOMÍNIO (regras)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#eef7ea;strokeColor=#8fbf7a;align=left;verticalAlign=top;fontSize=12;fontStyle=1;spacing=8;" vertex="1" parent="1">
+          <mxGeometry x="40" y="220" width="1320" height="460" as="geometry"/>
+        </mxCell>
+        <mxCell id="cli" value="&lt;b&gt;cli.py&lt;/b&gt;&lt;br&gt;menu · input()/print()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="100" y="90" width="260" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="demo" value="&lt;b&gt;demo.py&lt;/b&gt;&lt;br&gt;roteiro fixo" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="400" y="90" width="260" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="rot-orquestracao" value="orquestração" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="255" width="130" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="combate" value="&lt;b&gt;combate.py&lt;/b&gt;&lt;br&gt;turnos · bônus · XP" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="255" width="240" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="rot-entidades" value="entidades" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="345" width="130" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="entidade-personagem" value="&lt;b&gt;personagem.py&lt;/b&gt;&lt;br&gt;ABC + 3 subclasses" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="345" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="entidade-itens" value="&lt;b&gt;itens.py&lt;/b&gt;&lt;br&gt;Item ABC + 3 subclasses" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="345" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="entidade-grupo" value="&lt;b&gt;grupo.py&lt;/b&gt;&lt;br&gt;agregação 0..5" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="650" y="345" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="entidade-cenario" value="&lt;b&gt;cenario.py&lt;/b&gt;&lt;br&gt;ABC + 3 cenários" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="870" y="345" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="entidade-aldeao" value="&lt;b&gt;aldeao.py&lt;/b&gt;&lt;br&gt;não-combatente" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1090" y="345" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="rot-composicao" value="composição" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="435" width="130" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="ficha" value="&lt;b&gt;ficha.py&lt;/b&gt;&lt;br&gt;FichaDeStatus" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="435" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="inventario" value="&lt;b&gt;inventario.py&lt;/b&gt;&lt;br&gt;Inventario" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="435" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="rot-contratos" value="contratos e erros" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=9;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="525" width="130" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="interfaces" value="&lt;b&gt;interfaces.py&lt;/b&gt;&lt;br&gt;Combatente (interface)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="210" y="525" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="excecoes" value="&lt;b&gt;excecoes.py&lt;/b&gt;&lt;br&gt;10 erros de domínio" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#333333;align=center;verticalAlign=middle;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="430" y="525" width="200" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="nota-acoplamento" value="&lt;b&gt;Regra de dependência&lt;/b&gt;&lt;br&gt;A apresentação conhece o domínio;&lt;br&gt;o domínio nunca importa a apresentação." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;spacing=8;align=left;verticalAlign=top;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="700" y="265" width="600" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="nota-restricoes" value="&lt;b&gt;Restrições do enunciado&lt;/b&gt;&lt;br&gt;Python 3.10+ puro, sem dependências externas.&lt;br&gt;Sem API/HTTP, sem banco, sem HTML/GUI." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;spacing=8;align=left;verticalAlign=top;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="700" y="435" width="600" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="nota-adr" value="&lt;b&gt;ADR-02 — um arquivo por conceito&lt;/b&gt;&lt;br&gt;O diagrama espelha a árvore de arquivos;&lt;br&gt;cada conceito é localizável e testável." style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;spacing=8;align=left;verticalAlign=top;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="700" y="535" width="600" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="usa-cli-combate" value="usa" style="endArrow=open;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#333333;strokeWidth=1.2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cli" target="combate">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="205"/>
+              <mxPoint x="330" y="205"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="usa-cli-combate-rotulo" value="usa" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="usa-cli-combate">
+          <mxGeometry x="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="usa-demo-dominio" value="usa" style="endArrow=open;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#333333;strokeWidth=1.2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.35;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="demo" target="camada-dominio">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="190"/>
+              <mxPoint x="502" y="190"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="usa-demo-dominio-rotulo" value="usa" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="usa-demo-dominio">
+          <mxGeometry x="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="usa-combate-entidades" value="usa" style="endArrow=open;edgeStyle=none;rounded=0;html=1;fontSize=9;strokeColor=#333333;strokeWidth=1.2;exitX=0.5;exitY=1.0;exitDx=0;exitDy=0;entryX=0.6;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="combate" target="entidade-personagem">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="usa-combate-entidades-rotulo" value="usa" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="usa-combate-entidades">
+          <mxGeometry x="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consome-combate-contratos" value="consome" style="endArrow=open;dashed=1;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#333333;strokeWidth=1.2;exitX=0.0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="combate" target="interfaces">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="290"/>
+              <mxPoint x="195" y="560"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="consome-combate-contratos-rotulo" value="consome" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="consome-combate-contratos">
+          <mxGeometry x="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="compoe-personagem-ficha" value="compõe" style="startArrow=diamondThin;startFill=1;endArrow=none;edgeStyle=none;rounded=0;html=1;fontSize=9;strokeColor=#333333;strokeWidth=1.2;exitX=0.25;exitY=1.0;exitDx=0;exitDy=0;entryX=0.25;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="entidade-personagem" target="ficha">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="compoe-personagem-ficha-rotulo" value="compõe" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="compoe-personagem-ficha">
+          <mxGeometry x="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="compoe-personagem-inventario" value="compõe" style="startArrow=diamondThin;startFill=1;endArrow=none;edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;fontSize=9;strokeColor=#333333;strokeWidth=1.2;exitX=0.75;exitY=1.0;exitDx=0;exitDy=0;entryX=0.5;entryY=0.0;entryDx=0;entryDy=0;" edge="1" parent="1" source="entidade-personagem" target="inventario">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="425"/>
+              <mxPoint x="530" y="425"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="compoe-personagem-inventario-rotulo" value="compõe" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=9;" vertex="1" connectable="0" parent="compoe-personagem-inventario">
+          <mxGeometry x="0" relative="1" as="geometry">
+            <mxPoint x="0" y="-12" as="offset"/>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -2,7 +2,7 @@
 
 **Disciplina:** Programação Orientada a Objetos — Univassouras
 **Escopo:** sistema de console, sem backend (API/HTTP) e sem interface gráfica.
-**Ator único:** Jogador (operador do terminal).
+**Ator humano:** Jogador (operador do terminal). Ator secundário: Sistema (executa as regras).
 
 ---
 
@@ -27,7 +27,37 @@ tratamento de exceções, agregação, composição e consumo de classe.
 
 ---
 
-## 3. Visão geral dos casos de uso
+## 3. Diagrama de casos de uso (UML)
+
+O diagrama é gerado por script a partir de um modelo único
+(`ferramentas/diagramas/casos_uso.py`), que produz o arquivo editável e a prévia vetorial:
+
+| Arquivo | Uso |
+|---|---|
+| [`diagrama-casos-de-uso.drawio`](diagrama-casos-de-uso.drawio) | editável no [draw.io](https://app.diagrams.net) / diagrams.net |
+| [`diagrama-casos-de-uso.svg`](diagrama-casos-de-uso.svg) | pré-visualização versionada (renderiza no GitHub) |
+
+![Diagrama de casos de uso](diagrama-casos-de-uso.svg)
+
+Leitura do diagrama:
+
+- **Jogador** (ator principal) dispara os oito casos, de **UC01** a **UC08**.
+- **Sistema** é ator secundário apenas onde há regra de domínio a executar:
+  **UC04** (aplica o efeito do item), **UC06** (aplica o bônus de cenário) e
+  **UC07** (resolve turnos, defesa e XP).
+- **UC08** está no diagrama para evidenciar a interface: `Aldeao` **não** realiza
+  `Combatente`, portanto nunca entra em combate (`AlvoInvalidoError`).
+- A fronteira **"Sistema de RPG (console)"** delimita o escopo: sem API, sem banco e sem GUI.
+
+Regenerar:
+
+```bash
+python ferramentas/gerar_diagramas.py
+```
+
+---
+
+## 4. Visão geral dos casos de uso
 
 ```
                     +--------------------------------------+
@@ -57,7 +87,7 @@ tratamento de exceções, agregação, composição e consumo de classe.
 
 ---
 
-## 4. Casos de uso detalhados
+## 5. Casos de uso detalhados
 
 ### UC01 — Criar personagem
 
@@ -215,7 +245,7 @@ não pelo personagem — é o cenário **consumindo** a API de `Personagem`.
 
 ---
 
-## 5. Regras de negócio consolidadas
+## 6. Regras de negócio consolidadas
 
 | Código | Regra |
 |---|---|
@@ -232,7 +262,7 @@ não pelo personagem — é o cenário **consumindo** a API de `Personagem`.
 
 ---
 
-## 6. Requisitos não funcionais
+## 7. Requisitos não funcionais
 
 | ID | Requisito |
 |---|---|

@@ -62,6 +62,38 @@ Regra de dependência: **a apresentação conhece o domínio; o domínio nunca i
 apresentação**. O domínio não chama `input()` nem `print()` (exceto `Combate`, que
 acumula log em lista — quem imprime é a CLI).
 
+### 2.1 Diagrama de camadas (draw.io)
+
+Gerado por `ferramentas/diagramas/visao.py` a partir do mesmo modelo:
+
+| Arquivo | Uso |
+|---|---|
+| [`diagrama-visao-de-projeto.drawio`](diagrama-visao-de-projeto.drawio) | editável no draw.io / diagrams.net |
+| [`diagrama-visao-de-projeto.svg`](diagrama-visao-de-projeto.svg) | pré-visualização versionada |
+
+![Diagrama de visão de projeto](diagrama-visao-de-projeto.svg)
+
+Como ler:
+
+- **Faixa superior — apresentação:** `cli.py` e `demo.py` são a única porta de entrada
+  (`input()`/`print()`); não contêm regra de negócio.
+- **Faixa inferior — domínio:** dividido por responsabilidade, não por subpacote
+  (todos os arquivos vivem em `rpg/`, um conceito por arquivo):
+  - **orquestração** — `combate.py`: turnos, bônus de cenário, XP;
+  - **entidades** — `personagem.py`, `itens.py`, `grupo.py`, `cenario.py`, `aldeao.py`;
+  - **composição** — `ficha.py`, `inventario.py` (nascem dentro do personagem);
+  - **contratos e erros** — `interfaces.py` (`Combatente`), `excecoes.py` (10 erros).
+- **Setas:** `usa` (dependência de chamada), `diamante` (composição) e `consome`
+  (dependência de contrato). Nenhuma seta sobe do domínio para a apresentação — é a
+  regra de dependência em forma de desenho.
+- As notas registram as restrições do enunciado e o ADR-02 (um arquivo por conceito).
+
+Regenerar:
+
+```bash
+python ferramentas/gerar_diagramas.py
+```
+
 ---
 
 ## 3. Classes do domínio
@@ -272,4 +304,5 @@ Decisão: aceito.
 python -m rpg                          # menu interativo de console
 python demo.py                         # demonstração roteirizada (evidência)
 python -m unittest discover -s testes -v
+python ferramentas/gerar_diagramas.py  # regenera todos os .drawio + .svg
 ```

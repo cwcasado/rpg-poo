@@ -12,7 +12,31 @@ python demo.py                               # demonstração no console
 
 ---
 
-## 1. Exigências de `regras.md`
+## 1. Diagrama de rastreabilidade
+
+O diagrama transforma a tabela abaixo em evidência visual: cada linha vai da
+**exigência de `regras.md`** ao **arquivo que a implementa** e ao **teste que a prova**.
+
+| Arquivo | Uso |
+|---|---|
+| [`diagrama-rastreabilidade.drawio`](diagrama-rastreabilidade.drawio) | editável no draw.io / diagrams.net |
+| [`diagrama-rastreabilidade.svg`](diagrama-rastreabilidade.svg) | pré-visualização versionada |
+
+![Diagrama de rastreabilidade](diagrama-rastreabilidade.svg)
+
+As setas são o caminho da prova: remover o arquivo ou o teste de uma linha quebra a
+rastreabilidade daquele conceito. As 11 linhas cobrem os 9 conceitos das aulas, o
+requisito de ambiente favorecido e a restrição de não usar back-end/front-end.
+
+Regenerar:
+
+```bash
+python ferramentas/gerar_diagramas.py
+```
+
+---
+
+## 2. Exigências de `regras.md`
 
 | # | Exigência | Onde está implementado | Teste que prova |
 |---|---|---|---|
@@ -30,7 +54,7 @@ python demo.py                               # demonstração no console
 
 ---
 
-## 2. Conceitos das aulas 01–09
+## 3. Conceitos das aulas 01–09
 
 | Aula | Tema | Arquivo | Evidência concreta |
 |---|---|---|---|
@@ -46,7 +70,7 @@ python demo.py                               # demonstração no console
 
 ---
 
-## 3. Mapa das exceções de domínio
+## 4. Mapa das exceções de domínio
 
 | Exceção | Disparada quando | Teste |
 |---|---|---|
@@ -63,7 +87,7 @@ python demo.py                               # demonstração no console
 
 ---
 
-## 4. Como demonstrar em 30 segundos
+## 5. Como demonstrar em 30 segundos
 
 ```bash
 python demo.py
